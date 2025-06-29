@@ -3,6 +3,10 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const db = require('./db');
+app.get('/', (req, res) => {
+  res.send('Backend is live and working!');
+});
+
 app.use(cors());
 app.use(express.json());
 app.use('/api/contact', require('./routes/contact'));
